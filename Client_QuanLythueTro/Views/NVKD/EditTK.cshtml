@@ -1,0 +1,54 @@
+﻿@model Client_QuanLythueTro.Models.LoaiTaiKhoan
+
+@{
+    ViewData["Title"] = "EditTK";
+    Layout = "~/Views/NVKD/LayoutNVKD/LayoutNVKD.cshtml";
+    ViewBag.services = "active";
+    ViewBag.Name = "Edit";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="tile" id="printMe">
+                <div class="element-button">
+                    <h4 style="text-align:center">Chỉnh sửa dịch vụ loại tài khoản</h4>
+                </div>
+                <form asp-action="EditTK">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <b>Mã loại tài khoản</b>
+                        <input asp-for="idLoaiTK" class="form-control" readonly />
+                        <span asp-validation-for="idLoaiTK" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <b>Tên loại</b>
+                        <input asp-for="tenLoaiTK" class="form-control" />
+                        <span asp-validation-for="tenLoaiTK" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <b>Giá</b>
+                        <input asp-for="giaTK" class="form-control" type="number" min="0" required />
+                        <span asp-validation-for="giaTK" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <b>Hạn dùng/ngày</b>
+                        <input asp-for="hanDung" class="form-control" type="number" min="0" required />
+                        <span asp-validation-for="hanDung" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Lưu lại" class="btn btn-primary" /> |
+                        <a class="btn btn-warning" href="~/NVKD/QuanLyDichVu"> Trở lại</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div>
+            <a asp-action="QuanLyDichVu">Back to List</a>
+        </div
+                </div>
+
+                        </div>
+
+
